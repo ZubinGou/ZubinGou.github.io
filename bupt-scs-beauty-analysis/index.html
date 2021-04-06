@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>2019北邮计算机学院新生颜值分析 - Zubin`s Site</title><meta name="Description" content="关于 LoveIt 主题"><meta property="og:title" content="2019北邮计算机学院新生颜值分析" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://binko.me/bupt-scs-beauty-analysis/" />
+<meta property="og:image" content="https://binko.me/logo.png"/>
+<meta property="article:published_time" content="2019-08-23T13:56:11+08:00" />
+<meta property="article:modified_time" content="2021-04-06T18:31:46+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://binko.me/logo.png"/>
+
+<meta name="twitter:title" content="2019北邮计算机学院新生颜值分析"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://binko.me/bupt-scs-beauty-analysis/" /><link rel="prev" href="https://binko.me/some-intuitions-in-linear-algebra/" /><link rel="next" href="https://binko.me/theme-emoji-support/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2019北邮计算机学院新生颜值分析",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/binko.me\/bupt-scs-beauty-analysis\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/binko.me\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "Data Analysis, Crawler, BUPT, Python","wordcount":  1417 ,
+        "url": "https:\/\/binko.me\/bupt-scs-beauty-analysis\/","datePublished": "2019-08-23T13:56:11+08:00","dateModified": "2021-04-06T18:31:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "ZubinGou","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/binko.me\/images\/avatar.png",
+                    "width":  304 ,
+                    "height":  304 
+                }},"author": {
+                "@type": "Person",
+                "name": "ZubinGou"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: {
+              equationNumbers: { autoNumber: "AMS" },
+              extensions: ["AMSmath.js", "AMSsymbols.js"]
+          }
+      }
+  });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zubin`s Site">Zubin`s <span class="header-title-post"><i class='fas fa-paw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/bupt-scs-beauty-analysis/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zubin`s Site">Zubin`s <span class="header-title-post"><i class='fas fa-paw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/bupt-scs-beauty-analysis/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">2019北邮计算机学院新生颜值分析</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://binko.me" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ZubinGou</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/toy/"><i class="far fa-folder fa-fw"></i>Toy</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-08-23">2019-08-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1417 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/bupt-scs-beauty-analysis/" class="leancloud_visitors" data-flag-title="2019北邮计算机学院新生颜值分析">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg"
+        data-srcset="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg, ../../_resources/99becbf9b4944728b5404817ce706b7a.jpg 1.5x, ../../_resources/99becbf9b4944728b5404817ce706b7a.jpg 2x"
+        data-sizes="auto"
+        alt="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg"
+        title="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#头像爬取">头像爬取</a></li>
+    <li><a href="#性别划分--颜值评估">性别划分 + 颜值评估</a></li>
+    <li><a href="#颜值分布图">颜值分布图</a></li>
+    <li><a href="#结果分析">结果分析</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><strong>声明：为保护个人隐私，本博文不提供任何学生的个人信息。</strong></p>
+<p>偶得管理员账号🤐，分析2019计算机学院迎新页面找到了新生头像存放位置，正好赋闲，于是花了半天功夫，作了个颜值分析，却“意外”有了惊人的发现！</p>
+<blockquote>
+<p>Talk is cheap. Show me the code. - Linus Torvalds</p>
+</blockquote>
+<h2 id="头像爬取">头像爬取</h2>
+<p>爬虫基于request，大致思路是模拟登陆 -&gt; 获取LT -&gt; 进入迎新页面获取头像访问权 -&gt; 按照学号逐个爬取头像</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-py" data-lang="py"><span class="c1">#-*-coding=utf-8-*-</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">http</span> <span class="kn">import</span> <span class="n">cookiejar</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span>  <span class="n">BeautifulSoup</span>  <span class="k">as</span> <span class="n">bs</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="n">header</span> <span class="o">=</span>  <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span><span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0&#39;</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">getLt</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+<span class="c1"># 获取LT，相当于免再次登录的流水号，不可或缺</span>
+<span class="n">lt</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">dic</span> <span class="o">=</span>  <span class="p">{}</span>
+<span class="k">for</span> <span class="n">inp</span> <span class="ow">in</span> <span class="n">lt</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">):</span>
+<span class="k">if</span><span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">))</span><span class="o">!=</span><span class="bp">None</span><span class="p">:</span>
+<span class="n">dic</span><span class="p">[</span><span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)]</span><span class="o">=</span><span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">dic</span>
+
+<span class="k">def</span> <span class="nf">craw</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="n">base_url</span> <span class="o">=</span>  <span class="s2">&#34;*************&#34;</span>  <span class="c1"># 头像存储地址</span>
+<span class="n">img_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="n">img_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.jpg&#39;</span>
+<span class="n">img_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&#34;.</span><span class="se">\\</span><span class="s2">2019scs_face&#34;</span><span class="p">)</span>
+<span class="n">img_save</span> <span class="o">=</span> <span class="n">img_path</span> <span class="o">+</span>  <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span>  <span class="o">+</span> <span class="n">img_name</span>
+<span class="k">if</span>  <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+
+<span class="n">img_res</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">img_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">img_res</span><span class="o">.</span><span class="n">content</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">img_save</span><span class="p">,</span>  <span class="s2">&#34;wb&#34;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;image of </span><span class="si">%d</span><span class="s2"> saved&#34;</span><span class="o">%</span><span class="n">num</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://auth.bupt.edu.cn/authserver/login?service=http%3A</span><span class="si">%2F%2F</span><span class="s1">my.bupt.edu.cn</span><span class="si">%2F</span><span class="s1">index.portal&#39;</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">dic</span> <span class="o">=</span> <span class="n">getLt</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">postdata</span> <span class="o">=</span>  <span class="p">{</span>
+<span class="s1">&#39;username&#39;</span><span class="p">:</span><span class="s1">&#39;*************&#39;</span><span class="p">,</span>  <span class="c1">#此处为管理员的账号，学生账号无法爬取头像</span>
+<span class="s1">&#39;password&#39;</span><span class="p">:</span><span class="s1">&#39;*************&#39;</span><span class="p">,</span>  <span class="c1">#密码</span>
+<span class="s1">&#39;lt&#39;</span><span class="p">:</span><span class="n">dic</span><span class="p">[</span><span class="s1">&#39;lt&#39;</span><span class="p">],</span>
+<span class="s1">&#39;execution&#39;</span><span class="p">:</span><span class="s1">&#39;e1s1&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_eventId&#39;</span><span class="p">:</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span>
+<span class="s1">&#39;rmShown&#39;</span><span class="p">:</span><span class="s1">&#39;1&#39;</span>
+<span class="p">}</span>
+<span class="n">response_login</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://auth.bupt.edu.cn/authserver/login?service=http%3A</span><span class="si">%2F%2F</span><span class="s1">my.bupt.edu.cn</span><span class="si">%2F</span><span class="s1">index.portal&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">postdata</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">response2</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;*************&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">postdata</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>  <span class="c1"># 获得头像地址访问权</span>
+<span class="c1"># 大类：</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">**********</span><span class="p">,</span>  <span class="o">***********</span><span class="p">):</span>  <span class="c1"># 新手学号范围</span>
+<span class="n">craw</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="c1"># 智科：</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">**********</span><span class="p">,</span>  <span class="o">***********</span><span class="p">):</span>  <span class="c1"># 新手学号范围</span>
+<span class="n">craw</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>一共爬取549个头像，按照学号保存。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../_resources/ac60119ccfd349a094b980ee26287cc2.png"
+        data-srcset="../../_resources/ac60119ccfd349a094b980ee26287cc2.png, ../../_resources/ac60119ccfd349a094b980ee26287cc2.png 1.5x, ../../_resources/ac60119ccfd349a094b980ee26287cc2.png 2x"
+        data-sizes="auto"
+        alt="../../_resources/ac60119ccfd349a094b980ee26287cc2.png"
+        title="../../_resources/ac60119ccfd349a094b980ee26287cc2.png" /></p>
+<h2 id="性别划分--颜值评估">性别划分 + 颜值评估</h2>
+<p>使用了百度AI的<a href="https://ai.baidu.com/tech/face/detect" target="_blank" rel="noopener noreffer">人脸检测</a>v3版本的API，在管理控制台中创建应用，获取AppID、API Key和Secret Key：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../_resources/014706bce7754339a3116590165ba334.png"
+        data-srcset="../../_resources/014706bce7754339a3116590165ba334.png, ../../_resources/014706bce7754339a3116590165ba334.png 1.5x, ../../_resources/014706bce7754339a3116590165ba334.png 2x"
+        data-sizes="auto"
+        alt="../../_resources/014706bce7754339a3116590165ba334.png"
+        title="../../_resources/014706bce7754339a3116590165ba334.png" /></p>
+<p>首先安装 baidu-aip :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">pip install baidu-aip
+</code></pre></td></tr></table>
+</div>
+</div><p>调用API分析下载的头像，分析后，按照性别分别保存，为了省事儿，直接将颜值得分加入文件名中，完整代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-py" data-lang="py"><span class="c1">#-*-coding=utf-8-*-</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span>  <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">aip</span> <span class="kn">import</span>  <span class="n">AipFace</span>
+
+<span class="c1"># 定义常量</span>
+<span class="n">APP_ID</span> <span class="o">=</span>  <span class="s2">&#34;**********&#34;</span>
+<span class="n">API_KEY</span> <span class="o">=</span>  <span class="s2">&#34;**********&#34;</span>
+<span class="n">SECRET_KEY</span> <span class="o">=</span>  <span class="s2">&#34;**********&#34;</span><span class="err">`</span> 
+
+<span class="c1"># 初始化AipFace对象</span>
+<span class="n">aipFace</span> <span class="o">=</span>  <span class="n">AipFace</span><span class="p">(</span><span class="n">APP_ID</span><span class="p">,</span> <span class="n">API_KEY</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">)</span><span class="err">`</span> 
+
+<span class="c1"># 设置参数</span>
+<span class="n">options</span> <span class="o">=</span>  <span class="p">{</span>
+<span class="s2">&#34;face_field&#34;</span><span class="p">:</span>  <span class="s2">&#34;age,beauty,gender&#34;</span><span class="p">,</span><span class="err">`</span> 
+<span class="s2">&#34;max_face_num&#34;</span><span class="p">:</span>  <span class="mi">1</span>  <span class="p">,</span>
+<span class="s2">&#34;face_type&#34;</span><span class="p">:</span>  <span class="s2">&#34;CERT&#34;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">imageType</span> <span class="o">=</span>  <span class="s2">&#34;BASE64&#34;</span>
+
+<span class="c1">#将图片进行base64编码，再url编码</span>
+<span class="k">def</span> <span class="nf">get_file_content</span><span class="p">(</span><span class="n">filePath</span><span class="p">):</span><span class="err">`</span> 
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span>  <span class="s1">&#39;rb&#39;</span><span class="p">)</span>  <span class="k">as</span> <span class="n">fp</span><span class="p">:</span><span class="err">`</span> 
+<span class="n">image</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="err">`</span> 
+<span class="n">image_data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">image_data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="n">img_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s2">&#34;.</span><span class="se">\\</span><span class="s2">2019scs_face&#34;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">path</span><span class="p">,</span><span class="n">dir_list</span><span class="p">,</span><span class="n">file_list</span> <span class="ow">in</span> <span class="n">img_file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+
+<span class="c1"># 调用人脸属性检测接口` </span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">aipFace</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">get_file_content</span><span class="p">(</span><span class="n">file_path</span><span class="p">),</span><span class="n">imageType</span><span class="p">,</span><span class="n">options</span><span class="p">)</span>
+<span class="n">face_info</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;face_list&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">face_info</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">beauty</span> <span class="o">=</span> <span class="n">face_info</span><span class="p">[</span><span class="s1">&#39;beauty&#39;</span><span class="p">]</span>
+<span class="n">gender</span> <span class="o">=</span> <span class="n">face_info</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">beauty</span><span class="p">)</span>
+
+<span class="n">dir_</span> <span class="o">=</span>  <span class="s2">&#34;.</span><span class="se">\\</span><span class="s2">2019scs_face_done&#34;</span>
+<span class="n">img</span> <span class="o">=</span>  <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">gender</span> <span class="o">==</span>  <span class="s1">&#39;male&#39;</span><span class="p">:</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dir_</span> <span class="o">+</span>  <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">male</span><span class="se">\\</span><span class="s2">&#34;</span>  <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">beauty</span><span class="p">)</span>  <span class="o">+</span>  <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dir_</span> <span class="o">+</span>  <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">female</span><span class="se">\\</span><span class="s2">&#34;</span>  <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">beauty</span><span class="p">)</span>  <span class="o">+</span>  <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># 降低调用频率，防止QPS超限额</span>
+<span class="n">main</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>分析完成后，目测发现性别划分有5个划分出错（都是将妹子划分成汉子了🤣）。 因绝大多数新生照片拍摄环境恶劣，都是“清水出芙蓉，天然去雕饰”，而且AI评分很玄乎、准确度不高，所以呢……</p>
+<p>没多少人颜值分数及格。</p>
+<hr>
+<p>按照评分的数据显示：</p>
+<ul>
+<li>女生共120人，颜值最高分57.04，最低分9.37（？？？）</li>
+<li>男生共429人，颜值最高分79.52，最低分30.86（！！！）</li>
+</ul>
+<p>为了更直观的展现新生的颜值，我们使用 Matplotlib 画下颜值分布图。</p>
+<h2 id="颜值分布图">颜值分布图</h2>
+<p>代码实现如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-py" data-lang="py"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">male</span> <span class="o">=</span>  <span class="p">[]</span>
+<span class="n">female</span> <span class="o">=</span>  <span class="p">[]</span>
+
+<span class="n">img_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s2">&#34;.</span><span class="se">\\</span><span class="s2">2019scs_face_done</span><span class="se">\\</span><span class="s2">male&#34;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">path</span><span class="p">,</span><span class="n">dir_list</span><span class="p">,</span><span class="n">file_list</span> <span class="ow">in</span> <span class="n">img_file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">male</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+
+<span class="n">img_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s2">&#34;.</span><span class="se">\\</span><span class="s2">2019scs_face_done</span><span class="se">\\</span><span class="s2">female&#34;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">path</span><span class="p">,</span><span class="n">dir_list</span><span class="p">,</span><span class="n">file_list</span> <span class="ow">in</span> <span class="n">img_file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">female</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">male</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&#34;male&#34;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">female</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&#34;female&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Distribution of 2019SCS Face Score&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;Face Score&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;Probability&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&#34;./Distribution.jpg&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>展现出了下图：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg"
+        data-srcset="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg, ../../_resources/99becbf9b4944728b5404817ce706b7a.jpg 1.5x, ../../_resources/99becbf9b4944728b5404817ce706b7a.jpg 2x"
+        data-sizes="auto"
+        alt="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg"
+        title="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg" /></p>
+<p>男生平均颜值53.15， 女生平均颜值36.91</p>
+<h2 id="结果分析">结果分析</h2>
+<p>女生颜值得分较低的原因很简单，百度人脸检测模型的训练数据来自互联网，而美图工具等的使用大大提高了网络照片的“颜值”（尤其是女性），导致模型的“审美阈值”过高，看到素颜、不加修饰的脸庞，颜值分数也就这么骨感了…（机器评分仅供参考）</p>
+<p>这便有了所谓的证件照的悲剧。</p>
+<p>同理，影视剧等里的男神女神们，也提高了我们的“审美阈值”，为我们灌输了不健康的审美标准，这直接导致了近年来求偶动力、结婚率乃至全球范围内生育率（来自vczh）的走低😱，也极大了降低了人们的幸福水平，值得警醒和反思。（严肃脸）</p>
+<p><strong>参考</strong>：</p>
+<ul>
+<li>
+<p><a href="https://ai.baidu.com/docs#/Face-Detect-V3/top">https://ai.baidu.com/docs#/Face-Detect-V3/top</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/34425618">https://zhuanlan.zhihu.com/p/34425618</a></p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-04-06&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/5954bd5900dedc5879621ad21beea0b37a5366d8" target="_blank" title="commit by ZubinGou(zebgou@gmail.com) 5954bd5900dedc5879621ad21beea0b37a5366d8: fix mathjax and some bugs">
+                                    <i class="fas fa-hashtag fa-fw"></i>5954bd5</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/bupt-scs-beauty-analysis/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://binko.me/bupt-scs-beauty-analysis/" data-title="2019北邮计算机学院新生颜值分析" data-hashtags="Data Analysis,Crawler,BUPT,Python"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://binko.me/bupt-scs-beauty-analysis/" data-hashtag="Data Analysis"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://binko.me/bupt-scs-beauty-analysis/" data-title="2019北邮计算机学院新生颜值分析"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://binko.me/bupt-scs-beauty-analysis/" data-title="2019北邮计算机学院新生颜值分析"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://binko.me/bupt-scs-beauty-analysis/" data-title="2019北邮计算机学院新生颜值分析" data-image="../../_resources/99becbf9b4944728b5404817ce706b7a.jpg"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/data-analysis/">Data Analysis</a>,&nbsp;<a href="/tags/crawler/">Crawler</a>,&nbsp;<a href="/tags/bupt/">BUPT</a>,&nbsp;<a href="/tags/python/">Python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/some-intuitions-in-linear-algebra/" class="prev" rel="prev" title="Some Intuitions in Linear Algebra"><i class="fas fa-angle-left fa-fw"></i>Some Intuitions in Linear Algebra</a>
+            <a href="/theme-emoji-support/" class="next" rel="next" title="Emoji 支持">Emoji 支持<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">ZubinGou</a></span><span> | Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow">LoveIt</a></span> 
+
+                
+            </div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"BGWYRG74JP","algoliaIndex":"binko","algoliaSearchKey":"1048a43ee01931f87e76ac2d1955675f","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
