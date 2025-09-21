@@ -8,15 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I’m Zhibin Gou, currently a third-year M.S. student at [SIGS](https://www.sigs.tsinghua.edu.cn/en/), Tsinghua University, advised by Prof. [Yujiu Yang](https://sites.google.com/view/iigroup-thu/about). Before that, I received my bachelor's degree in Computer Science from Beijing University of Posts and Telecommunications in Jun. 2022.
+I am an AI researcher at DeepSeek, where I work on LLM reasoning and RL.
 
-My long-term research interest lies in AGI, with a current focus on reasoning in LLMs. I am dedicated to developing simple, general, and scalable pathways to achieve AGI.
+I hold an M.S. in Artificial Intelligence from Tsinghua University (advisor: Prof. [Yujiu Yang](https://iigroup.github.io/about/)) and a B.S. in Computer Science from Beijing University of Posts and Telecommunications.
+
+My long-term research goal is to advance artificial superintelligence (ASI) by developing simple, general, and scalable methods that enable systems to surpass human performance across tasks and environments.
 
 
 Education
 ======
 
-- **Aug. 2022 - Jun. 2025 (Expected)** M.Sc., Div. of Information Science and Technology, SIGS, Tsinghua University, Beijing, China.
+- **Aug. 2022 - Jun. 2025** M.Sc., Div. of Information Science and Technology, SIGS, Tsinghua University, Beijing, China.
 <br>*GPA: 4.0/4.0*
 
 - **Sep. 2018 - Jun. 2022** B.Sc., School of Computer Science, Beijing University of Posts and Telecommunications, Beijing, China.
@@ -27,11 +29,14 @@ Selected Publications
 ======
 (\* indicates equal contribution)
 
-- [ICLR 2024] [*ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving*](https://arxiv.org/abs/2309.17452) [[website](https://microsoft.github.io/ToRA/)][[code](https://github.com/microsoft/ToRA)] (Stars: 1k+)
-<br> **Zhibin Gou**\*, Zhihong Shao\*, Yeyun Gong, Yelong Shen, Yujiu Yang, Minlie Huang, Nan Duan, Weizhu Chen
-<br> ToRA solves math problems by integrating chain-of-thought reasoning with program-based tool use. ToRA-34B is the first open-source LLM that achieves over 50% on MATH, which is competitive with GPT-4 solving problems with programs.
+- [[Nature 2025](https://www.nature.com/articles/s41586-025-09422-z)] [*DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning*](https://arxiv.org/pdf/2501.12948)
+<br> DeepSeek-AI (**Core Contributor**)
 
-- [ICLR 2024] [*CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing*](https://arxiv.org/abs/2305.11738) [[code](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)] (Citations: 200+)
+- [ICLR 2024] [*ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving*](https://arxiv.org/abs/2309.17452) [[website](https://microsoft.github.io/ToRA/)][[code](https://github.com/microsoft/ToRA)]
+<br> **Zhibin Gou**\*, Zhihong Shao\*, Yeyun Gong, Yelong Shen, Yujiu Yang, Minlie Huang, Nan Duan, Weizhu Chen
+<br> ToRA integrates chain-of-thought reasoning with code-based tools to solve math problems. ToRA-34B is the first open-source LLM that is competitive with GPT-4 in tool-assisted mathematical problem solving.
+
+- [ICLR 2024] [*CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing*](https://arxiv.org/abs/2305.11738) [[code](https://github.com/microsoft/ProphetNet/tree/master/CRITIC)]
 <br> **Zhibin Gou**, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, Weizhu Chen
 <br> The first paper to find that current LLMs struggle with "Self-Verification" and "Self-Correction", and propose tool-augmented critiquing for reliable self-improvement.
 
@@ -53,24 +58,13 @@ Selected Publications
 
 - [ACL 2023] [*MvP: Multi-view Prompting Improves Aspect Sentiment Tuple Prediction*](https://arxiv.org/abs/2305.12627) [[code](https://github.com/ZubinGou/multi-view-prompting)]
 <br> **Zhibin Gou**\*, Qingyan Guo\*, Yujiu Yang
-<br> MvP is a simple unified generative framework for structure prediction, achieving state-of-the-art performance on 10 datasets across 4 ABSA tasks.
 
 - [ACL 2022 findings] [*Long Time No See! Open-Domain Conversation with Long-Term Persona Memory*](https://arxiv.org/abs/2203.05797) [[data](https://github.com/PaddlePaddle/Research/tree/master/NLP/ACL2022-DuLeMon)]
 <br> Xinchao Xu\*, **Zhibin Gou**\*, Wenquan Wu, Zheng-Yu Niu, Hua Wu, Haifeng Wang, and Shihang Wang
-<br> The first long-term memory conversation task and the largest multi-turn mutual persona chat dataset in Chinese.
-
-
-
-<!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=microsoft&repo=rho)](https://github.com/microsoft/rho) -->
-
-
-<!-- [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=microsoft&repo=ToRA)](https://github.com/microsoft/ToRA) -->
 
 
 Tech Reports
 ======
-- [Arxiv 2025.01] [*DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning*](https://arxiv.org/pdf/2501.12948)
-<br> DeepSeek-AI
 
 - [Arxiv 2024.12] [*DeepSeek-V3 Technical Report*](https://arxiv.org/pdf/2412.19437)
 <br> DeepSeek-AI
@@ -106,6 +100,7 @@ Competitions
 
 Honors & Awards
 ======
+- NeurIPS 2024 Best Paper Runner-up, 2024
 - Outstanding Graduate Thesis, Beijing, 2022
 - Outstanding Graduate, Beijing, 2022
 - National Scholarship (top 1%), Ministry of Education, China, 2020 
